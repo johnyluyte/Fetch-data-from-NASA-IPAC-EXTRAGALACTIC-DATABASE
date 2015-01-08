@@ -5,10 +5,14 @@
      <link rel="stylesheet" type="text/css" href="lib/bootstrap/darkly.min.css">
      <style>
         body{
-            font-size: 1.8rem;
+            font-size: 1.6rem;
         }
         footer{
             font-size: 80%;
+        }
+        #div_loading_percent_text{
+            font-size: 3.0rem;
+            color: yellow;
         }
      </style>
 </head>
@@ -29,53 +33,33 @@
     </div>
     <hr>
 
-    <?php
-        // function test_input($data) {
-        //     $data = trim($data);
-        //     $data = stripslashes($data);
-        //     $data = htmlspecialchars($data);
-        //     return $data;
-        // }
-        // if ($_SERVER["REQUEST_METHOD"] == "GET") {
-        //     if (empty($_GET["sample_numbers"])) {
-        //         $total_samples_index = 3;
-        //     } else {
-        //         $total_samples_index = test_input($_GET["sample_numbers"]);
-        //     }
-        // }
-    ?>
     <div id="div_howManySample">
         <h3>How many samples do you need?</h3>
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-4">
                 <form class="form-inline">
                   <div class="form-group">
                     <div class="input-group">
                       <div class="input-group-addon">Fetch</div>
-                      <input type="text" class="form-control" id="exampleInputAmount" placeholder="" size="8" name="        sample_numbers" value="<?php echo $total_samples_index ?>">
+                      <input type="text" class="form-control" id="inputAmount" placeholder="" size="8" name="        sample_numbers" value="10">
                       <div class="input-group-addon">samples</div>
                     </div>
                   </div>
                   <button type="submit" class="btn btn-info" id="btn_gogogo">Go Go Go</button>
                 </form>
             </div>
-            <div class="col-lg-6" id="loading">
-                Apple
+            <div class="col-lg-4" id="div_loading">
             </div>
-        </div>
-        <br>
-        <div class="alert alert-warning" role="alert">
-            If the sample number is set too large (i.e. larger than 100), it may take a long time to get the result. <br>
-            To fetch 1000 samples, you may fetch 100 samples 10 times, which is much faster than fetching 1000 samples directly. <br>
+            <div class="col-lg-1" id="div_loading_percent_text">
+            </div>
         </div>
     </div>
     <hr>
 
-    <div id="div_result">
+    <div>
         <h3>Results:</h3>
-        <?php
-            // require 'fetch.php'
-        ?>
+        <div id="div_result">
+        </div>
     </div>
 
     <hr>
@@ -87,6 +71,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="lib/bootstrap/bootstrap.min.js"></script>
-    <script src="fetch.js"></script>
+    <script src="ajaxFetch.js"></script>
 </body>
 </html>

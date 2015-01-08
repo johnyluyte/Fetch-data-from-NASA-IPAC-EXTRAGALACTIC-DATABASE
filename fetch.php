@@ -1,5 +1,15 @@
 <?php
 
+/*
+
+** This file is DEPRECATED **
+
+Now we use **ajaxFetch.js** and **ajaxFetch.php** instead.
+
+This was the original php file that used to fetch $total_samples_index number of data all at once.
+
+*/
+
 echo '<table class="table table-striped">';
 echo '    <thead>';
 echo '        <tr>';
@@ -116,25 +126,5 @@ echo '    </tbody>';
 echo '</table>';
 
 
-/*
-php get file
-http://php.net/manual/en/function.file-get-contents.php
-
-require include
-strtok
-strpos
-echo "<td>$random_RA</td>";
-$star_page_content = file_get_contents('http://ned.ipac.caltech.edu/cgi-bin/calc?in_csys=Equatorial&in_equinox=B1950.0&obs_epoch=1950.0&lon=2h59m59s&lat=30d0m0s&pa=0.0&out_csys=Equatorial&out_equinox=J2000.0');
-
-php form usage
-http://www.w3schools.com/php/showphp.asp?filename=demo_form_validation_complete
-
-time, microtime(true)
-https://stackoverflow.com/questions/12435556/format-a-float-to-two-decimal-places
-
-getcurrent time
-https://stackoverflow.com/questions/470617/get-current-date-and-time-in-php
-
-*/
 
 ?>
