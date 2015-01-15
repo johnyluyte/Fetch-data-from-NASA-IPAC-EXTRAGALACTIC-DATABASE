@@ -1,15 +1,5 @@
 <?php
 
-/*
-
-** This file is DEPRECATED **
-
-Now we use **ajaxFetch.js** and **ajaxFetch.php** instead.
-
-This was the original php file that used to fetch $total_samples_index number of data all at once.
-
-*/
-
 echo '<table class="table table-striped">';
 echo '    <thead>';
 echo '        <tr>';
@@ -38,7 +28,6 @@ $current_query_time = date('m/d/Y h:i:s a', time());
 $total_samples = $total_samples_index;
 
 for($sample_number=1; $sample_number<=$total_samples; $sample_number++){
-
   /*
     Randomly choose "RA or Longitude" and "DEC or Latitude" while leave other fields intact.
     "RA or Longitude" : from 0h0m0s ~ 24h (e.g. 2h59m59s)
@@ -54,7 +43,6 @@ for($sample_number=1; $sample_number<=$total_samples; $sample_number++){
   echo "<td>$random_RA</td>";
   echo "<td>$random_DEC</td>";
 
-
   // Fetch the whole page
   $startFetchTime = microtime(true);
   $star_page_content = file_get_contents('http://ned.ipac.caltech.edu/cgi-bin/calc?in_csys=Equatorial&in_equinox=B1950.0&obs_epoch=1950.0&lon=' . $random_RA . '&lat=' . $random_DEC . '&pa=0.0&out_csys=Equatorial&out_equinox=J2000.0');
@@ -64,7 +52,6 @@ for($sample_number=1; $sample_number<=$total_samples; $sample_number++){
     We cannot use strpos(string, startPos, endPos) here due to the string containing both " character and ' character.
     So we use 2 strpos() as a workaround.
   */
-
   $posStart = strpos($star_page_content,'Landolt B');
   $star_page_content = substr($star_page_content,$posStart);
 
@@ -124,7 +111,6 @@ echo '            <td>'.number_format($totalAllTime,3).'</td>';
 echo '        </tr>';
 echo '    </tbody>';
 echo '</table>';
-
 
 
 ?>
