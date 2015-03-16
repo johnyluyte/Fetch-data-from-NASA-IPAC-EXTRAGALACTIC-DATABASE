@@ -6,7 +6,7 @@
 
 Demo page:
 
-- [http://chunnorris.net/public/fetch-data-from-nasa-extragalactic-database/](http://chunnorris.net/public/fetch-data-from-nasa-extragalactic-database/)
+- [http://chunnorris.cc/public/fetch-data-from-nasa-extragalactic-database/](http://chunnorris.net/public/fetch-data-from-nasa-extragalactic-database/)
 
 ## Introuction
 This program generates random **RA(Longitude)** and **DEC(Latitude)**. It sends these parameters to [NASA/IPAC EXTRAGALACTIC DATABASE](http://ned.ipac.caltech.edu/forms/calculator.html) and fetch the following fields from the returned result.
