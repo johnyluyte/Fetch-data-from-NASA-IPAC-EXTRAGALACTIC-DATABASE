@@ -6,8 +6,8 @@
   "RA or Longitude" : from 0h0m0s ~ 24h (e.g. 2h59m59s)
   "DEC or Latitude" : from -90 ~ 90 (e.g. 30d0m0s)
 */
-$random_RA = rand(0,23)."h".rand(0,59)."m".rand(0,59)."s";
-$random_DEC = rand(-89,89)."d".rand(0,59)."m".rand(0,59)."s";
+$random_RA = mt_rand(0,23)."h".mt_rand(0,59)."m".mt_rand(0,59)."s";
+$random_DEC = mt_rand(-89,89)."d".mt_rand(0,59)."m".mt_rand(0,59)."s";
 
 
 /* Fetch the whole page */

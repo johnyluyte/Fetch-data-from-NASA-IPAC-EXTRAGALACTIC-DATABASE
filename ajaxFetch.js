@@ -73,6 +73,7 @@ function startTask(i) {
         type: 'GET',
         dataType: 'json',
         url: 'ajaxFetch.php',
+        cache: false,
         error: function(xhr, ajaxOptions, thrownError) {
             console.log(xhr.responseText);
             console.log(thrownError);
